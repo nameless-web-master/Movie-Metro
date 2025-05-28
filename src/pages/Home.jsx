@@ -10,6 +10,7 @@ import './home.scss';
 /* eslint-disable arrow-body-style */
 const Home = () => {
   const dispatch = useDispatch();
+  
   const movieText = 'Now';
   const showText = 'Game';
 

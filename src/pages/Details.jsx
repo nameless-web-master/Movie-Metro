@@ -14,10 +14,12 @@ import './details.scss';
 const Details = () => {
   const { imdbID } = useParams();
   const dispatch = useDispatch();
+
   const data = useSelector(getSelectedMovieOrShow);
   useEffect(() => {
     dispatch(fetchAsyncMoviesOrShowsDetails(imdbID));
   }, [dispatch, imdbID]);
+
   return (
     <div>
       <div className="back-container">
