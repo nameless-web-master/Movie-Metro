@@ -31,13 +31,15 @@ const MovieList = () => {
     );
 
   renderShows =
-    shows.Response === 'True' ? (
-      shows.Search.map((movie) => <MovieCard key={movie.imdbID} data={movie} />)
-    ) : (
-      <div className="shows-error">
-        <h3>{shows.Error}</h3>
-      </div>
-    );
+    shows.Response === 'True' ?
+      (
+        shows.Search.map((movie) => <MovieCard key={movie.imdbID} data={movie} />)
+      ) :
+      (
+        <div className="shows-error">
+          <h3>{shows.Error}</h3>
+        </div>
+      );
 
   const [term, setTerm] = useState('');
   const dispatch = useDispatch();
